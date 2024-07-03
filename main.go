@@ -2,6 +2,8 @@ package main
 
 import (
 	"game/pkg"
+	"strconv"
+	"strings"
 )
 
 const (
@@ -16,41 +18,50 @@ func main() {
 	pkg.Scramble()
 
 	/*
-	   var input int
+							   var input int
 
-	   	for i := 0; i < tries; i++ {
-	   		fmt.Println("Enter a number")
-	   		fmt.Scan(&input)
+							   	ffor i := 0; i < tries; i++ {
+							   		fmt.Println("Enter a number")
+							   		fmt.Scan(&input)
+						input = strings.TrimSpace(input)
 
-	   		if input == gameVal {
-	   			fmt.Println("You won")
-	   		}
-	   		if input > gameVal {
-	   			fmt.Println("Too high")
-	   		}
-	   		if input < gameVal {
-	   			fmt.Println("Too low")
-	   		}
-	   	}
+							   		if input == gameVal {
+							   			fmt.Println("You won")
+							   		}
+							   		if input > gameVal {
+							   			fmt.Println("Too high")
+							   		}
+							   		if input < gameVal {
+							   			fmt.Println("Too low")
+							   		}
+							   	}
 
-	   	for i := 0; i < tries; i++ {
-	   		fmt.Println("Enter a number")
 
-	   		reader := bufio.NewReader(os.Stdin)
-	   		input, _ := reader.ReadString('\n')
-	   		input = strings.TrimSpace(input)
 
-	   		fmt.Println(reflect.TypeOf(input))
+		gameval := rand.Intn(100)+1
+							   	for i := 0; i < tries; i++ {
+							   		fmt.Println("Enter a number")
 
-	   		if input == string(gameVal) {
-	   			fmt.Println("You won")
-	   		}
-	   		if input > gameVal {
-	   			fmt.Println("Too high")
-	   		}
-	   		if input < gameVal {
-	   			fmt.Println("Too low")
-	   		}
-	   	}
+							   		reader := bufio.NewReader(os.Stdin)
+							   		input, _ := reader.ReadString('\n')
+							   		input = strings.TrimSpace(input)
+
+				strToInt,err := strconv.Atoi(input)
+				if err != nil{
+				fmt.Println("Invalid input")
+				i--
+				}
+
+
+							   		if input == gameVal {
+							   			fmt.Println("You won")
+							   		}
+							   		if input > gameVal {
+							   			fmt.Println("Too high")
+							   		}
+							   		if input < gameVal {
+							   			fmt.Println("Too low")
+							   		}
+							   	}
 	*/
 }
